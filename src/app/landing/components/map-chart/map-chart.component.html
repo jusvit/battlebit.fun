@@ -1,0 +1,8 @@
+<div class="chart-container" *ngIf="this.serverListDataProvider.hasData">
+  <canvas baseChart
+          [type]="'pie'"
+          [data]="data"
+          [options]="options"
+          [legend]="legend">
+  </canvas>
+</div>

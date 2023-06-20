@@ -1,0 +1,8 @@
+<div class="chart-container" *ngIf="this.serverListDataProvider.hasData">
+  <canvas baseChart
+          [type]="'line'"
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend">
+  </canvas>
+</div>

@@ -1,0 +1,62 @@
+<div class="wrapper" *ngIf="this.serverListDataProvider.hasData">
+  <h2>Total Servers</h2>
+  <p>{{serverListDataProvider.serverList.length | number}}</p>
+  <div class="misc-stats">
+    <div class="misc-stat">
+      <h5>Official</h5>
+      <p>{{ serverListDataProvider.officialServerCount | number}}</p>
+    </div>
+    <div class="misc-stat">
+      <h5>Unofficial</h5>
+      <p>{{ serverListDataProvider.serverList.length - serverListDataProvider.officialServerCount | number}}</p>
+    </div>
+    <div class="misc-stat">
+      <h5>Password</h5>
+      <p>{{ serverListDataProvider.passwordServerCount | number}}</p>
+    </div>
+  </div>
+
+  <br>
+
+  <h2>Servers by Region</h2>
+  <div class="region-breakdown">
+    <table>
+      <tr>
+        <th>Region</th>
+        <th>Servers</th>
+        <th>Players</th>
+        <th>Open Slots</th>
+      </tr>
+      <tr *ngFor="let region of serverListDataProvider.regionServers | keyvalue">
+        <td>{{region.key}} <b><small>({{region.value.PlayerCount / serverListDataProvider.totalPlayers | percent}})</small></b></td>
+        <td>{{region.value.ServerCount | number}}</td>
+        <td>{{region.value.PlayerCount | number}}</td>
+        <td>{{region.value.Capacity - region.value.PlayerCount | number}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <br>
+
+  <h2>Map Sizes</h2>
+
+  <div class="map-sizes">
+    <div class="map-size" *ngFor="let mapSize of serverListDataProvider.mapSizes | keyvalue">
+      <h5>{{mapSize.key}}</h5>
+      <p>{{mapSize.value | number}}  <small>({{mapSize.value / serverListDataProvider.serverList.length | percent}})</small></p>
+    </div>
+  </div>
+
+  <br>
+
+
+
+  <br>
+  <h2>Game Modes</h2>
+  <div class="misc-stats">
+    <div class="misc-stat" *ngFor="let gamemode of serverListDataProvider.gameModeCount | keyvalue">
+      <h5>{{gamemode.key}}</h5>
+      <p>{{gamemode.value | number}}  <small>({{gamemode.value / serverListDataProvider.serverList.length | percent}})</small></p>
+    </div>
+  </div>
+</div>

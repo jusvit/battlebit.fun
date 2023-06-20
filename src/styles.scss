@@ -1,0 +1,30 @@
+
+@import 'node_modules/@swimlane/ngx-datatable/index.css';
+@import 'node_modules/@swimlane/ngx-datatable/themes/bootstrap.css';
+@import 'node_modules/@swimlane/ngx-datatable/assets/icons.css';
+
+@import "node_modules/@ng-select/ng-select/themes/default.theme.css";
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body  {
+  background-color: #2a2e31;
+  color: white;
+  margin: 0;
+  height: 100%;
+
+  text-align: center;
+
+  font-family: Jost, sans-serif;
+}
+
+h1, h2{
+  margin: 0;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  color: cadetblue;
+}
+

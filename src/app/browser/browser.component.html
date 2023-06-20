@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <h1>Server Browser</h1>
+  <input class="searchBar" type="text" [(ngModel)]="searchNameFilter" (keyup)="this.updateFilter()" placeholder="Search Server Name">
+  <ng-select class="region-select" [(ngModel)]="this.selectedRegionFilter" placeholder="All Regions" (ngModelChange)="this.updateFilter()">
+    <ng-option *ngFor="let region of this.regions" [value]="region">{{region | titlecase}}</ng-option>
+  </ng-select>
+
+  <ngx-datatable
+    #table
+    class="bootstrap datatable"
+    [headerHeight]="50"
+    [loadingIndicator]="this.isLoading"
+    [columnMode]="ColumnMode.force"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [trackByProp]="'Name'"
+    [rows]="filteredServers"
+    [sorts]="[{ prop: 'Players', dir: 'desc' }]"
+    [rowHeight]="50"
+    [summaryRow]="true"
+    summaryPosition="bottom"
+  >
+    <ngx-datatable-column name="Name" prop="Name" [minWidth]="200"></ngx-datatable-column>
+    <ngx-datatable-column name="Map" prop="Map"></ngx-datatable-column>
+    <ngx-datatable-column name="Gamemode" prop="Gamemode"></ngx-datatable-column>
+    <ngx-datatable-column name="Region" prop="Region"></ngx-datatable-column>
+    <ngx-datatable-column name="Players" prop="Players"></ngx-datatable-column>
+    <ngx-datatable-column name="Capacity" prop="MaxPlayers"></ngx-datatable-column>
+    <ngx-datatable-column name="Queued" prop="QueuePlayers"></ngx-datatable-column>
+    <ngx-datatable-column name="Hz" prop="Hz" [summaryFunc]="summaryForHzWorkAround"></ngx-datatable-column>
+    <ngx-datatable-column name="Time" prop="DayNight"></ngx-datatable-column>
+    <ngx-datatable-column name="Official" prop="IsOfficial"></ngx-datatable-column>
+    <ngx-datatable-column name="Protected" prop="HasPassword"></ngx-datatable-column>
+    <ngx-datatable-column name="AntiCheat" prop="AntiCheat"></ngx-datatable-column>
+    <ngx-datatable-column name="Build" prop="Build"></ngx-datatable-column>
+  </ngx-datatable>
+
+
+  <div class="button-container">
+    <button class="button button-main" (click)="this.canUpdate=!this.canUpdate">{{this.canUpdate ? "Pause" : "Update"}}</button>
+    <button class="button button-secondary" (click)="navigateBack()">Back</button>
+  </div>
+
+</div>

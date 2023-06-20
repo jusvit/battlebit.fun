@@ -1,0 +1,62 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title{
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+p{
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.region-breakdown{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.region{
+  display: flex;
+}
+
+
+td, th {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.map-sizes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-size{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.misc-stats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.misc-stat{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+small{
+  font-size: 0.8rem;
+}
+

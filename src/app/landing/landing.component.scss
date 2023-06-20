@@ -1,0 +1,100 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.title {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+
+  h1{
+    margin-bottom: 0;
+  }
+}
+
+.section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-item {
+  flex: 1 1 0;
+  width: 100%;
+  margin-top: 2rem;
+
+  border-top: 2px solid white;
+  padding-top: 1rem;
+
+}
+
+.game{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.game-iframe{
+  width: 90vw;
+}
+
+.mapChart{
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.browser-button {
+  background-color: #ffffff; /* Green */
+  border: none;
+  color: #000000;
+  padding: 15px 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 18%;
+  cursor: pointer;
+  border-radius: 2%;
+}
+
+.browser-button:hover{
+  transform: scale(1.025);
+}
+
+//// Responsive-ness
+@media only screen and (min-width: 1080px) {
+  .section {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .game-iframe{
+    width: 30vw;
+  }
+
+  .wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .section-item{
+    margin: unset;
+    width: 0;
+    border-top: unset;
+  }
+}
+

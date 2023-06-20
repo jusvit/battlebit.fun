@@ -1,0 +1,7 @@
+<div class="player-counter-wrapper" *ngIf="this.serverListDataProvider.hasData">
+  <h1>Playing</h1>
+  <p class="stat">{{this.serverListDataProvider.playerCount | number}}</p>
+  <h1>Queued</h1>
+  <p class="stat">{{this.serverListDataProvider.playerQueueCount | number}}</p>
+
+</div>

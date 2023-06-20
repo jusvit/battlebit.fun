@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="title">
+    <h1>BattleBit (dot) Fun</h1>
+    <sub>Statistical overview (using their API)</sub>
+  </div>
+
+  <div class="section">
+    <div class="section-item">
+      <app-player-count></app-player-count>
+    </div>
+    <div class="section-item">
+      <app-player-chart></app-player-chart>
+      <button class="browser-button" (click)="navigateBrowser()">Server Browser</button>
+    </div>
+    <div class="section-item">
+      <app-breakdown></app-breakdown>
+    </div>
+  </div>
+
+  <div class="section">
+
+    <div class="section-item">
+      <img class="image" style='height: 100%; width: 20%; object-fit: contain' src="assets/player.png" />
+    </div>
+
+    <div class="game section-item">
+      <iframe class="game-iframe" src="https://store.steampowered.com/widget/671860/" frameborder="0" height="190"></iframe>
+
+      <app-footer></app-footer>
+    </div>
+
+    <div class="mapChart section-item">
+      <h3>Map distribution</h3>
+      <app-map-chart></app-map-chart>
+    </div>
+
+  </div>
+</div>

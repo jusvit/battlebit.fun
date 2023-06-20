@@ -1,0 +1,73 @@
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.datatable{
+  width: 80%;
+  flex: 1;
+}
+
+.region-select{
+  margin: 0.5rem;
+  font-size: 0.7rem;
+  min-width: 10vw;
+}
+
+::ng-deep .ngx-datatable .datatable-body {
+  max-height: 77vh;
+  overflow: hidden auto;
+}
+
+.searchBar {
+  min-width: 20vw;
+  text-align: center;
+  height: 1.5rem;
+  display: block;
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow;
+  border: 0;
+  outline: 0;
+}
+
+.searchBar:focus {
+  outline: none !important;
+  -webkit-appearance: none;
+}
+
+.button-container{
+  display: flex;
+  margin-bottom: 0.5%;
+}
+
+.button {
+  border: none;
+  color: #000000;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 1%;
+  cursor: pointer;
+  border-radius: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.button:hover{
+  transform: scale(1.025);
+}
+
+.button-main{
+  background-color: #ffffff;
+}
+
+.button-secondary{
+  background-color: #c43636;
+  color: white;
+}
