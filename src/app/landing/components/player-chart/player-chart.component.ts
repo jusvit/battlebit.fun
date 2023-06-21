@@ -23,8 +23,8 @@ export class PlayerChartComponent implements OnInit{
         fill: false,
         backgroundColor: 'rgba(148,159,177,0.2)',
         borderColor: 'rgb(255,255,255)',
-        pointBackgroundColor: 'rgba(148,159,177,1)',
-        pointBorderColor: '#fff',
+        pointBackgroundColor: 'rgba(255,255,255,0)',
+        pointBorderColor: 'rgba(255,255,255,0)',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(148,159,177,0.8)',
       },
@@ -66,11 +66,11 @@ export class PlayerChartComponent implements OnInit{
       this.chart?.update();
 
       // @ts-ignore
-      if (this.lineChartData.labels?.length > 200) {
+      if (this.lineChartData.labels?.length > 600) {
         this.lineChartData.labels?.shift();
       }
 
-      if (this.lineChartData.datasets[0].data.length > 200) {
+      if (this.lineChartData.datasets[0].data.length > 600) {
         this.lineChartData.datasets[0].data.shift();
       }
 
