@@ -69,7 +69,7 @@ export class BrowserComponent implements OnInit{
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.table?.resize.emit(true);
+    this.table?.recalculate();
   }
 
 }
