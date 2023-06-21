@@ -21,6 +21,10 @@
   overflow: hidden auto;
 }
 
+::ng-deep .datatable-body-cell-label {
+  text-align: center;
+}
+
 .searchBar {
   min-width: 20vw;
   text-align: center;
