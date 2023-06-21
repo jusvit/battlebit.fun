@@ -21,6 +21,7 @@ export class PlayerChartComponent implements OnInit{
         data: [],
         label: 'Players (Playing + Queued)',
         fill: false,
+        tension: 0.4,
         backgroundColor: 'rgba(148,159,177,0.2)',
         borderColor: 'rgb(255,255,255)',
         pointBackgroundColor: 'rgba(255,255,255,0)',
