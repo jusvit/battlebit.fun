@@ -6,6 +6,7 @@
 @import "node_modules/@ng-select/ng-select/themes/default.theme.css";
 
 /* You can add global styles to this file, and also import other style files */
+$base-font-size: 9px;
 
 html, body  {
   background-color: #2a2e31;
@@ -16,6 +17,27 @@ html, body  {
   text-align: center;
 
   font-family: Jost, sans-serif;
+
+  font-size: $base-font-size;
+
+  @media only screen and (min-width: 576px) {
+    font-size: $base-font-size * 1.8; // Adjust the multiplier as needed
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: $base-font-size * 1.8; // Adjust the multiplier as needed
+  }
+
+  @media only screen and (min-width: 1080px) {
+    font-size: $base-font-size * 0.98; // Adjust the multiplier as needed
+  }
+
+  @media only screen and (min-width: 1285px) {
+    font-size: $base-font-size * 1.41; // Adjust the multiplier as needed
+  }
+  @media only screen and (min-width: 2000px) {
+    font-size: $base-font-size * 1.95; // Adjust the multiplier as needed
+  }
 }
 
 h1, h2{
@@ -28,3 +50,12 @@ a {
   color: cadetblue;
 }
 
+
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
